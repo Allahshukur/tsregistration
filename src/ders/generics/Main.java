@@ -1,15 +1,19 @@
 package ders.generics;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
 
         BMW bmw = new BMW();
-        MyCar<BMW> myCar = new MyCar<>(bmw);
-        System.out.println("BMW = " + myCar.getCar());
-
         Mercedes mercedes = new Mercedes();
-        MyCar<Mercedes> myCar1 = new MyCar<>(mercedes);
-        System.out.println("Mercedes = " + myCar1.getCar());
+        MyCar<BMW, Mercedes> myCar = new MyCar<>();
+
+        List<String> list = new ArrayList<>();
+        list.add("ddssd");
+
+        System.out.println(list.get(0));
 
     }
 }

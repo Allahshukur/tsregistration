@@ -1,18 +1,15 @@
 package ders.generics;
 
-public class MyCar<A extends AbstractCar> {
+public class MyCar<A, B> extends MyCar2<A, B> {
 
-    private final A car;
+    private A car_1;
+    private B car_2;
 
-    public MyCar(A car) {
-        this.car = car;
+    public A getCar_1(){
+        return car_1;
     }
 
-    public A getCar(){
-        return car;
-    }
-    
-    public void drive(){
-        car.drive();
+    public B getCar_2(){
+        return car_2;
     }
 }
