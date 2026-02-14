@@ -18,7 +18,7 @@ public class MyArray<T> {  // Menim array listim.
         if (i == array.length){
             this.array = Arrays.copyOf(array, array.length + (array.length/2));
         }
-        array[i++] = obj;
+        this.array[i++] = obj;
     }
 
     public T get(int i){
