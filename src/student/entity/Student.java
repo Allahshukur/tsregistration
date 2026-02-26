@@ -1,12 +1,23 @@
 package student.entity;
 
-public class Student {
+public class Student implements Comparable<Student> {
 
     private int reqNumber;
     private String name;
     private String surname;
     private int age;
     private String  teacher;
+
+    public Student() {
+    }
+
+    public Student(int reqNumber, String name, String surname, int age, String teacher) {
+        this.reqNumber = reqNumber;
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+        this.teacher = teacher;
+    }
 
     public int getReqNumber() {
         return reqNumber;
@@ -56,5 +67,10 @@ public class Student {
     @Override
     public String toString() {
         return reqNumber + ". " + name + " " + surname + " " + age + " " + teacher;
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        return this.reqNumber - o.reqNumber;
     }
 }
